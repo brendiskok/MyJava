@@ -6,10 +6,9 @@ public class Six {
 
 	public static void main(String[] args) {
 		
-		// в n малых бидонах 80л молока. Сколько литров молока в m больших бидонах, 
-		// если в каждом большом на 12 л больше, чем в малом?
+		// РІ n Р±РёРґРѕРЅР°С… 80Р» РјРѕР»РѕРєР°. СЃРєРѕР»СЊРєРѕ РјРѕР»РѕРєР° РІ m Р±РёРґРѕРЅР°С…, РµСЃР»Рё РІ РєР°Р¶РґРѕРј Р±РѕР»СЊС€РѕРј РЅР° 12 Р» Р±РѕР»СЊС€Рµ?
 		
-		System.out.print("Введите количество малых бидонов: ");
+		System.out.print("РљРѕР»РёС‡РµСЃС‚РІРѕ РјР°Р»С‹С… Р±РёРґРѕРЅРѕРІ: ");
 		Scanner askN = new Scanner (System.in);
 			
 		// little can's quantity
@@ -19,7 +18,7 @@ public class Six {
 		double little = 80.0 / n;  
 				
 		
-			System.out.print("Введите количество больших бидонов: ");
+			System.out.print("РљРѕР»РёС‡РµСЃС‚РІРѕ Р±РѕР»СЊС€РёС… Р±РёРґРѕРЅРѕРІ: ");
 		// big can's quantity 
 		Scanner askM = new Scanner(System.in);
 		int m = askM.nextInt();
@@ -28,7 +27,7 @@ public class Six {
 		//milk in m big cans
 		double bigs = (little + 12.0) * m;           
 		
-		System.out.println("В больших бидонах у вас " + bigs + " л. молока.");
+		System.out.println("Р’ Р±РѕР»СЊС€РёС… Р±РёРґРѕРЅР°С… " + bigs + " Р». РјРѕР»РѕРєР°.");
 		
 		askN.close();
 		askM.close();
