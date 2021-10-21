@@ -4,7 +4,7 @@ public class Seven {
 	
 	public static void main (String[] args) {
 		
-		//Дан прямоугольник, ширина которого в два раза меньше длины. Найти площадь прямоугольника
+		System.out.println("What's the weather like today?");
 		
 	     
 		
