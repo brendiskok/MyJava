@@ -11,7 +11,8 @@ public class Page51 {
 			if (x < 3) {
 				System.out.println("little x");
 						}
-		
+		System.out.println("kate");
+		System.out.println("");
 		}
 		}
 		
