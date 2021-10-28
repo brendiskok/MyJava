@@ -6,7 +6,7 @@ public class RandSentence46 {
 		//3 word sequences 
 		
 		String[] seq1 = {"прекрасная", "супер", "круто", "зашибись" };
-		String[] seq2 = {"отлично ", ", ���������� ", ", �����������"};
+		String[] seq2 = {"отлично ", ", превосходно ", ", �����������"};
 		String[] seq3 = {", ���������!", ", ���������!", ", ��� ���������!"};
 		
 		// counting number of words in sequences
