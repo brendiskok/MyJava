@@ -4,7 +4,7 @@ package by.sveta.les01.main;
     	
     	public static void main (String[] args) {
     		
-    		double a = 49;
+    		double a = 49.0;
     		double b = 89.2;
     		
     		 double c = (a + b) / 2;
