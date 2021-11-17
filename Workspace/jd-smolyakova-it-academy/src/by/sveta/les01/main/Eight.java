@@ -9,7 +9,7 @@ public class Eight {
 		double b = 1.0;
 		double c = 1.0;
 		
-		double res = ( (b + Math.sqrt(Math.pow(b, 2) + 4 * a * c)) / 2 * a) - Math.pow(a, 3) * c + 1 / Math.pow(b, 2);
+		double res = ( (b + Math.sqrt(Math.abs(Math.pow(b, 2) + 4 * a * c))) / 2 * a) - Math.pow(a, 3) * c + 1 / Math.pow(b, 2);
 		
 		System.out.println(res);
 
