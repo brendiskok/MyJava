@@ -6,20 +6,22 @@ public class Sixteen {
 		// Найти произведени цифр заданного четырехзначного числа
 		
 		int x = 1234;
-		double check = x;
-		double lastNumber = 0;
-		double result = 1;
+		int check = x;
+		int lastNumber = 0;
+		int result = 1;
 		int i = 0;
 				
 		while (check > 0) {
 		
-			lastNumber = (x - lastNumber) / Math.pow(10, i) % 10;
+			lastNumber = (x - lastNumber) / (int) Math.pow(10, i) % 10;
 			result = result * lastNumber;
 			i++;
-			check = (check - lastNumber) * Math.pow(10, i);
-			System.out.println(lastNumber + result);
-			 		}
+			check = check - (lastNumber * (int) Math.pow(10, (i - 1)));
 		
+		}
+		
+		
+		System.out.println("произведение цифр заданного числа 1234 = " + result);
 
 	}
 

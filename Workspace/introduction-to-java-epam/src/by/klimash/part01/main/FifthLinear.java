@@ -18,6 +18,10 @@ public class FifthLinear {
 				
 		int s = t1 - 60 * m; 
 		
+		if (h < 10) {
+			
+			System.out.print(t + " c. = " + h);	
+		}
 		System.out.println(t + " c. = " + h + " ч. " + m + " мин. " + s + " с.");
 		
 		
