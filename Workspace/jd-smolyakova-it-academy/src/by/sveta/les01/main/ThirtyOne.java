@@ -19,5 +19,7 @@ public class ThirtyOne {
 		System.out.println("Лодка прошла " + S + " км");
 
 	}
+	
+	
 
 }
