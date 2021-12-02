@@ -16,6 +16,8 @@ public class Linear {
 
 	public static void First() {
 		
+		// Найдите значение функции: z = ( (a – 3 ) * b / 2) + c.
+		
 		System.out.println("Найдите значение функции: z = ((a – 3 ) * b / 2) + c, если:");
 		
 				double a = 4.5;
@@ -32,11 +34,14 @@ public class Linear {
 	
 	public static void Second() {
 		
+		//Вычислить значение выражения по формуле (все переменные принимают действительные значения):
+		//(b + sqrt(b^2 + 4ac)) / (2a) - a^3c + b^(-2)
+		
 		System.out.println("Вычислить значение выражения по формуле (все переменные принимают действительные значения)");
-		System.out.println("((b + sqrt(b^2 + 4ac)) / (2a) - a^3c + b^-2), если:");
+		System.out.println("((b + sqrt(b^2 + 4ac)) / (2a) - a^3c + b^(-2), если:");
 			
 				double a = 4.0;
-				double b = -1.0;
+				double b = (-1.0);
 				double c = 7.5;
 				
 		System.out.println("a = " + a + ", b = " + b + ", c = " + c);		
@@ -53,8 +58,11 @@ public class Linear {
 	
 	public static void Third() {
 		
+		// Вычислить значение выражения по формуле (все переменные принимают действительные значения):
+		// ((sin x + cos y) / (cos x - sin y)) * tg xy
+		
 		System.out.println("Вычислить значение выражения по формуле (все переменные принимают действительные значения):");
-		System.out.println("(sin x + cos y) / (cos x - sin y) * tg xy, если:");
+		System.out.println("((sin x + cos y) / (cos x - sin y)) * tg xy, если:");
 						
 				double x = 1.57;
 				double y = 1.047;
@@ -63,7 +71,7 @@ public class Linear {
 		        
 		        double fortg = x * y;
 		
-				double result = (Math.sin(x) + Math.cos(y)) / (Math.cos(x) - Math.sin(y)) * Math.tan(fortg);
+				double result = ((Math.sin(x) + Math.cos(y)) / (Math.cos(x) - Math.sin(y))) * Math.tan(fortg);
 				
 				
 				System.out.printf("Ответ: " + "%.3f", result);
@@ -74,7 +82,10 @@ public class Linear {
 	
 	public static void Fourth() {
 		
-				
+		// Дано действительное число R вида nnn.ddd (три цифровых разряда в дробной и целой частях).
+		// Поменять местами дробную и целую части числа и вывести полученное значение числа.
+
+						
 		        double R = 222.333;
 		        
 		        System.out.println("Дано число " + R + ". Поменять местами его дробную и целую части");
@@ -93,8 +104,11 @@ public class Linear {
 	
 	
 	public static void Fifth() {
-	
 		
+		// Дано действительное число R вида nnn.ddd (три цифровых разряда в дробной и целой частях). 
+		// Поменять местами дробную и целую части числа и вывести полученное значение числа.
+
+			
         int T = 4000;
         
         System.out.println("Дано число T = " + T + ", которое представляет длительность прошедшего времени в секундах. Вывести");
@@ -134,8 +148,11 @@ public class Linear {
 	
 	public static void Sixth() {
 		
+		// Для данной области составить линейную программу, которая печатает true, 
+		// если точка с координатами (х, у) принадлежит закрашенной области, и false — в противном случае:
+		
 		int x = 3;
-		int y = -2;
+		int y = (-2);
 		
 		System.out.println("Напечатать true, если точка с координатами (" + x + ", " + y + ") принадлежит области (-4 <= x <= 4, -3 <= y <= 0)");
 		System.out.println("или области (-2 <= x <= 2, 0 <= y <= 3), false - в противном случае.");
@@ -143,8 +160,9 @@ public class Linear {
 		boolean X1 = (x >= -4 && x <= 4);
 		boolean Y1 = (y >= -3 && y <= 0);
 		
-		if (X1 && Y1)
+		if (X1 && Y1) {
 			System.out.println("Ответ: true");
+				}
 		
 		else {
 		   boolean X2 = (x >= -2 && x <= 2);
