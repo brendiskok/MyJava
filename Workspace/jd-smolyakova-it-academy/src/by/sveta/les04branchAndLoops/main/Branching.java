@@ -7,7 +7,7 @@ public class Branching {
 
 	public static void main(String[] args) {
 		
-	/*	First();
+		First();
 		Second();
 		Third();
 		Fourth();
@@ -32,12 +32,12 @@ public class Branching {
 		TwentyThree();
 		TwentyFour();
 		TwentyFive();
-		TwentySix();*/
+		TwentySix();
 		TwentySeven();
 		TwentyEight();
 		TwentyNine();
 		Thirty();
-		ThirtyOne();
+		ThirtyOne(); 
 		ThirtyTwo();
 		ThirtyThree();
 		ThirtyFour();
@@ -45,14 +45,10 @@ public class Branching {
 		ThirtySix();
 		ThirtySeven();
 		ThirtyEight();
+		ThirtyNine();
 		Fourty();
 		
-		
-				
-		
-		
-		
-	
+			
 		}
 	
 	public static void First() {
@@ -953,6 +949,22 @@ public class Branching {
 		// определить, пройдет ли кирпич через отверстие.
 		
 		System.out.print("31: ");
+		
+		double A = 10;
+		double B = 8;
+		
+		double x = 12.5;
+		double y = 6.5;
+		
+		if ((x < A) && (y < B)) {
+			System.out.println("Кирпич пройдет в отверстие");
+		}
+		else {
+			System.out.println("Кирпич не пройдет в отверстие");
+		}
+		
+		System.out.println();
+		
 	
 	
 	}
@@ -962,6 +974,32 @@ public class Branching {
 		// каких-либо двух из них положительной.
 		
 		System.out.print("32: ");
+		
+		int a = (-9);
+		int b = 10;
+		int c = 5;
+		
+		int res1 = a + b;
+		int res2 = a + c;
+		int res3 = b + c;
+		
+		if (res1 > 0) {
+			System.out.println("a + b > 0");
+		}
+		
+		else if (res2 > 0) {
+			System.out.println("a + c > 0");
+		}
+		
+		else if (res3 > 0) {
+			System.out.println("b + c > 0");
+		}
+		
+		else {
+			System.out.println("сумма любых двух из заданных чисел меньше нуля");
+		}
+		
+		System.out.println();
 	
 	
 	}
@@ -971,11 +1009,48 @@ public class Branching {
 		// к секретной информации в базе данных. доступ к базе имеют только 6 человек, разбитых на 3 группы по степени доступа.
 		// Они имеют следующие пароли: 9583, 1747 - доступны модули баз A, B, C;
 		// 3331, 7922 - доступны модули баз B, C
-		// 9455б 8997 - доступен модуль базы С.
+		// 9455, 8997 - доступен модуль базы С.
 		
 		System.out.print("33: ");
-	
-	
+		
+		System.out.println("Введите пароль: ");
+		
+		Scanner enterPass = new Scanner (System.in);
+		int pass = enterPass.nextInt();
+		
+		switch (pass) {
+		case 9583:
+			System.out.println("Добро пожаловать! Доступны модули A, B, C");
+			break;
+			
+		case 1747:
+			System.out.println("Добро пожаловать! Доступны модули A, B, C");
+			break;
+			
+		case 3331:
+			System.out.println("Добро пожаловать! Доступны модули B, C");
+			break;
+			
+		case 7922:
+			System.out.println("Добро пожаловать! Доступны модули B, C");
+			break;
+			
+		case 9455:
+			System.out.println("Добро пожаловать! Доступен модуль C");
+			break;
+			
+		case 8997:
+			System.out.println("Добро пожаловать! Доступен модуль C");
+			break;
+			
+			default:
+				System.out.println("Недостаточно прав доступа, обратитесь к администратору");
+			
+		}
+		
+		System.out.println();
+		
+			
 	}
 	
 	
@@ -988,21 +1063,136 @@ public class Branching {
 		 */
 		
 		System.out.print("34: ");
+		
+		System.out.println("Введите стоимость книги: ");
+		
+		Scanner asker = new Scanner (System.in);
+		double price = asker.nextDouble();
+		
+		System.out.println("Внесено покупателем: ");
+		double cash = asker.nextDouble();
+		
+		if (price == cash) {
+			System.out.println("Спасибо! ");
+		}
+		
+		else if (price < cash) {
+			double change = cash - price;
+			System.out.println("Возьмите сдачу " + change + " руб.");
+		}
+		
+		else {
+			double shortage = price - cash;
+			System.out.println("Недостаточно средств, внесите еще " + shortage + " руб.");
+		}
+		
+		System.out.println();
+		
 	
 	
 	}
 	
 	public static void ThirtyFive() {
-		// Вычислить значение функции
+		// Вычислить число и месяц в невисокосном году по номеру дня
 		
 		System.out.print("35: ");
-	
+		
+		int number = 365;
+		
+		//january
+		if (number < 32) {
+			System.out.println(number + " января");
+		}
+		
+		//february
+		else if ( (number > 31) && (number < 60)) {
+			number = number - 31;
+			System.out.println(number + " февраля");
+		}
+		
+		//march
+		else if ( (number > 59) && (number < 91)) {
+			number = number - 59;
+			System.out.println(number + " марта");
+		}
+		
+		//april
+		else if ( (number > 90) && (number < 121)) {
+		    number = number - 90;
+			System.out.println(number + " апреля");
+		}
+		
+		
+		//may
+		else if ( (number > 120) && (number < 152)) {
+			number = number - 120;
+			System.out.println(number + " мая");
+				}
+		
+		//june
+		else if ( (number > 151) && (number < 182)) {
+			number = number - 151;
+			System.out.println(number + " июня");
+				}
+		
+		//july
+		else if ( (number > 181) && (number < 213)) {
+			number = number - 181;
+			System.out.println(number + " июля");
+				}
+		
+		//august
+		else if ( (number > 212) && (number < 244)) {
+			number = number - 212;
+			System.out.println(number + " августа");
+				}
+		
+		//september
+		else if ( (number > 243) && (number < 274)) {
+			number = number - 243;
+			System.out.println(number + " сентября");
+				}
+		
+		//october
+		else if ( (number > 273) && (number < 305)) {
+			number = number - 273;
+			System.out.println(number + " октября");
+				}
+		
+		//november
+		else if ( (number > 304) && (number < 335)) {
+			number = number - 304;
+			System.out.println(number + " ноября");
+				}
+		
+		//december
+		else {
+			number = number - 334;
+			System.out.println(number + " декабря");
+				}
+		
+		System.out.println();
 	
 	}
 	
 	public static void ThirtySix() {
-		// 
+		// Вычислить значение функции
 		System.out.print("36: ");
+		
+		double x = 1.5;
+		double y;
+		
+		if (x <= 3) {
+			y = Math.pow(x, 2) - 3 * x + 9;
+			System.out.println("x <= 3, y = " + y);
+		}
+		
+		else {
+			y = 1 / (Math.pow(x, 3) + 6);
+			System.out.println("x > 3, y = " + y);
+		}
+		
+		System.out.println();
 	
 	
 	}
@@ -1011,6 +1201,21 @@ public class Branching {
 		// Вычислить значение функции
 		
 		System.out.print("37: ");
+		
+		double x = 4.0;
+		double y;
+		
+		if (x >= 3) {
+			y = (- Math.pow(x, 2)) + 3 * x + 9;
+			System.out.println("x >= 3, y = " + y);
+		}
+		
+		else {
+			y = 1 / (Math.pow(x, 3) - 6);
+			System.out.println("x < 3, y = " + y);
+		}
+		
+		System.out.println();
 	
 	
 	}
@@ -1019,6 +1224,21 @@ public class Branching {
 		// Вычислить значение функции
 		
 		System.out.print("38: ");
+		
+		double x = 2;
+		double y;
+		
+		if ( (x >= 0) && (x <= 3)) {
+			y = Math.pow(x, 2);
+			System.out.println("0 <= x <= 3; y = " + y);
+		}
+		
+		else {
+			y = 4;
+			System.out.println("y = " + y);
+		}
+		
+		System.out.println();
 	
 	
 	}
@@ -1028,6 +1248,21 @@ public class Branching {
 		// Вычислить значение функции
 		
 		System.out.print("39: ");
+		
+		double x = 10;
+		double y;
+		
+		if (x >= 8) {
+			y = (- Math.pow(x, 2)) + x - 9 ;
+			System.out.println("x >= 8; y = " + y);
+		}
+		
+		else {
+			y = 1 / (Math.pow(x, 4) - 6);
+			System.out.println("x < 8; y = " + y);
+		}
+		
+		System.out.println();
 	
 	
 	}
@@ -1036,6 +1271,21 @@ public class Branching {
 		// Вычислить значение функции
 		
 		System.out.print("40: ");
+		
+		double x = 14;
+		double y;
+		
+		if (x <= 13) {
+			y = (-Math.pow(x, 3) + 9);
+			System.out.println("x <= 13; y = " + y);
+		}
+		
+		else {
+			y = (-(3 / (x + 1)));
+			System.out.println("x > 13; y = " + y);
+		}
+		
+		System.out.println();
 	
 	
 	}
