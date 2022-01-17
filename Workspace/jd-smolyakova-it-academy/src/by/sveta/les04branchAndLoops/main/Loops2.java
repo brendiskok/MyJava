@@ -21,8 +21,9 @@ public class Loops2 {
 		TwentyTwo();
 		TwentyFour();
 		TwentyFive();
-		TwentySix();*/
-		TwentySeven();
+		TwentySix();
+		TwentySeven();*/
+		TwentyEight();
 		
 		
 		
@@ -433,8 +434,125 @@ public class Loops2 {
 		
 		int n = number.nextInt();
 		
+		int t;
+		
+		for (; m <= n; m++) {
+			
+			t = 2;
+			
+			System.out.println("m = " + m);
+			
+			while ( t <= m) {
+				
+			if ( (m % t) == 0) {
+				System.out.println(t + " - делитель числа " + m);
+			}
+			
+			t++;
+			
+			}
+		
 	}
 	
-	
 	}
+	
+	public static void TwentyEight() {
+		
+		/* Написать программу, в которой вводятся 2 операнда X и Y и знак операции (+ - / *)
+		 * Вычислить результат Z в зависимости от знака. Предусмотреть реакции на возможный неверный знак
+		 * операции, а также на ввод Y = 0 при делении.
+		 * Организовать возможность многократных вычислений без перезагрузки программы (построить цикл).
+		 * В качестве символа прекращения вычислений принять 0.
+		 */
+		
+		
+		
+		Scanner data = new Scanner(System.in);
+		
+		boolean check;
+		
+		    do {
+			  System.out.println("Введите значение X: ");
+			  
+			  check = data.hasNextDouble();
+			  
+			  System.out.println("0check = " + check);
+			 
+			  if (check) {
+			
+				  double X = data.nextDouble();
+				   System.out.println("1check = " + check);
+		      }
+			
+			  else {
+				 
+				  System.out.println("2check = " + check);
+		      }
+		    }
+			
+			while (!check);
+		
+		//
+		
+		/*
+		
+		System.out.println("Введите значение Y: ");
+		
+		double Y = data.nextDouble(); */
+		
+		
+		/*do {
+		System.out.println("Введите знак желаемой операции (+, -, /, *): ");
+		
+		String forsign = data.next(); 
+		
+		int length = forsign.length();
+		
+		char sign = forsign.charAt(0);
+		boolean signTrue = false;
+					
+			switch (sign) {
+			
+			case ('+'):
+				System.out.println("+");
+			    signTrue = true;
+			    System.out.println();
+				break;
+			
+			case ('-'):
+				System.out.println("-");
+			    signTrue = true;
+				break;
+			
+			case ('/'):
+				System.out.println("/");
+			    signTrue = true;
+				break;
+				
+			case ('*'):
+			 	System.out.println("*");
+			    signTrue = true;
+				break;
+			
+			default:
+				signTrue = false;
+				
+			}
+			
+				
+	}
+				
+		while (false);
+		
+		*/
+		
+		
+		
+	}	
+		
+	}
+	
+
+	
+
 
