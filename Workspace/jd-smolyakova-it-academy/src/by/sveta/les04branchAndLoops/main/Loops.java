@@ -37,10 +37,10 @@ public class Loops {
 		TwentyFour();
 		TwentyFive();
 		TwentySix();
-		TwentySeven();*/
-		TwentyEight();
-		/*TwentyNine();
-		Thirty();
+		TwentySeven();
+		TwentyEight();*/
+		TwentyNine();
+		/*Thirty();
 		ThirtyOne(); 
 		ThirtyTwo();
 		ThirtyThree();
@@ -944,23 +944,53 @@ public class Loops {
 	
 
 	public static void TwentyNine() {
-		// Даны три точки A(x1, y1), B (x2, y2), C(x3,y3). Определить, будут ли они расположены на одной прямой.
+		
+		//Даны 2 числа. Определить цифры, входящие в запись как первого, так и второго чисел
 		
 		System.out.print("29: ");
 		
-
+		int a = 2845907;
+		int b;
+		
+		boolean noMatch = true;
+		
+		int aNext;
+		int bNext;
+		
+		while (a > 0) {
+			
+			aNext = a % 10;
+					
+			b = 517296;
+		
+			while (b > 0) {
+				
+				bNext = b % 10;
+				
+				if (aNext == bNext) {
+					System.out.println(aNext + "   " );
+					noMatch = false;
+				}
+				
+				b = b / 10;
+			}
+			
+			a = a / 10;
+		}
+		
+		if (noMatch) {
+			System.out.println("Совпадений нет");
+		}
 		
 		System.out.println();
 		
-	
-	
 	}
 	
 	public static void Thirty() {
-		// Даны действительные числа a, b, c.Удвоить эти числа, если a>b>c,
-		// и заменить их абсолютными значениями, если это не так.
+		//Написать программу, переводящую римские цифры в арабские
 		
 		System.out.print("30: ");
+		
 		
 
 		System.out.println();
