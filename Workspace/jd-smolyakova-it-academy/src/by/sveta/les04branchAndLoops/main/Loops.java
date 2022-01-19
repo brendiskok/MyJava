@@ -38,11 +38,12 @@ public class Loops {
 		TwentyFive();
 		TwentySix();
 		TwentySeven();
-		TwentyEight();*/
+		TwentyEight();
 		TwentyNine();
-		/*Thirty();
+		Thirty();*/
+		
 		ThirtyOne(); 
-		ThirtyTwo();
+		/*ThirtyTwo();
 		ThirtyThree();
 		ThirtyFour();
 		ThirtyFive();
@@ -182,11 +183,11 @@ public class Loops {
 		
 		while (a <= b) {
 			if (a <= 2) {
-				y = a;
+				y = (-a);
 				System.out.print("*" + y + " ");
 			}
 			else {
-				y = (-a);
+				y = a;
 				System.out.print("/" + y + " ");
 			}
 			a = a + h;
@@ -256,7 +257,7 @@ public class Loops {
 						
 		for (int i = 1; i < 201; i++) {
 			
-			BigInteger number = BigInteger.valueOf(i);
+			BigInteger number = BigInteger.valueOf(i*i);
 			
 			sum = sum.multiply(number);
 		}
@@ -490,23 +491,27 @@ public class Loops {
 		
 		System.out.print("19: ");
 		
-		double e = 0.1;
-		double sum = 0;
-		double a;
+        double e = 0.1;
 		
-		for (double n = 1; n < 11; n++) {
+		System.out.println("e = " + e);
+		
+		double result = 0;
+		double a;
+		int n = 1;
+		
+		do {
 			
 			a = Math.abs( 1 / Math.pow(2, n) + 1 / Math.pow(3, n));
-			
+			n++;
 			
 			if (a >= e) {
-				
-				sum = sum + a;
-			}
-		
+			result = result + a;
+			}	
 		}
 		
-		System.out.println(" sum: " + sum);
+		while (a >= e);
+		
+		System.out.println("Ответ: " + result);
 		
 		System.out.println();
 	
@@ -727,7 +732,7 @@ public class Loops {
 		
 		System.out.print("26: ");
 		
-		for (int n = 33; n < 128; n++) {
+		for (int n = 32; n < 128; n++) {
 			
 			int number = n;
 			char symbol = (char) number;
@@ -989,22 +994,102 @@ public class Loops {
 	public static void Thirty() {
 		//Написать программу, переводящую римские цифры в арабские
 		
-		System.out.print("30: ");
+		System.out.print("30: Введите римское число: ");
+		
+		Scanner forNumber = new Scanner(System.in);
+		
+		String numberR = forNumber.next();
+		
+		int length = numberR.length();
+		
+		int arab = 0;
+		int arabPrevious = 0;
+		
+		int sum = 0;
+				
+		for (int n = 0; n < length; n++) {
+			
+		   char each = numberR.charAt(n);
+		   
+		   arabPrevious = arab;
+		
+		   switch (each) {
+		
+	     	case ('I'):
+			   arab = 1;
+		    break;
+		    
+		    case ('V'):
+		    	arab = 5;
+	    	break;
+		
+		    case ('X'):
+		    	arab = 10;
+		    break;
+		
+		    case ('L'):
+			   arab = 50;
+		    break;
+		
+		    case ('C'):
+			   arab = 100;
+		    break;
+		
+		    case ('D'):
+		    	arab = 500;
+	     	break;
+		
+	    	case ('M'):
+		    	arab = 1000;
+		    break;
+		
+	     	default:
+			   arab = 0;
+		}
 		
 		
-
+		if	(arabPrevious < arab) {
+			
+			sum = sum - 2 * arabPrevious + arab;
+		}
+		
+		else {
+			sum = sum + arab;
+		}
+		
+		}
+		
+		System.out.println(sum);
 		System.out.println();
+		
+		forNumber.close();
 	
 	
 	}
 	
+	
+	
 	public static void ThirtyOne() {
-		// Заданы размеры A, B прямоугольного отверстия и размеры x, y кирпича.
-		// определить, пройдет ли кирпич через отверстие.
+		
+				
+		// Компьютер генерирует 5 чисел из диапазона [1, 15]. Человек пытается их угадать
+	    // программа должна выводить угаданные и неугаданные числа из сгенерированных программой,
+        // а также ошибочные числа пользователя.
+		
 		
 		System.out.print("31: ");
 		
-
+		int[] Random = new int[5];
+		
+		int min = 1;
+		int max = 15;
+		int difference = max - min;
+		
+		for (int n = 0; n < 5; n++) {
+			Random[n] = (int)(Math.random() * difference) + 1;
+			System.out.println(Random[n]);
+		}
+		
 		
 		System.out.println();
 		
@@ -1013,10 +1098,8 @@ public class Loops {
 	}
 	
 	public static void ThirtyTwo() {
-		// Написать программу, которая по заданным трем числам определяет, является ли сумма
-		// каких-либо двух из них положительной.
-		
-		System.out.print("32: ");
+
+		System.out.print("32: ");		
 		
 		
 		System.out.println();
